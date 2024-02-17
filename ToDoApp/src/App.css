@@ -1,0 +1,156 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('sk2.png');
+  background-size: cover;
+  background-position: center;  
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 600px; /* increased max-width for better spacing */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(242, 242, 242, 0.9); /* Adjusted background color and opacity */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #3f51b5;
+  margin-bottom: 8px; /* adjusted margin for better spacing */
+}
+
+h2 {
+  color: #3f51b5;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  color: #3f51b5;
+  font-size: 14px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+}
+
+button.add-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+}
+
+button.add-btn:hover {
+  background-color: #45a049;
+}
+
+button.delete-btn {
+  background-color:red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+}
+
+button.edit-btn,
+button.delete-btn,
+button.complete-btn {
+  background-color: #808080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+}
+
+button.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+}
+
+
+button.edit-btn:hover,
+button.delete-btn:hover,
+button.complete-btn:hover {
+  background-color: #a9a9a9;
+}
+
+button.complete-btn {
+  background-color:#45a049;
+}
+
+.task-bars {
+  display: flex;
+  flex-wrap: wrap; /* Allow task bars to wrap to the next line */
+  justify-content: space-between;
+}
+
+.task-bar {
+  flex: 1;
+  text-align: center;
+  padding: 10px 5px; /* Added padding for better spacing */
+  margin: 0 5px; /* Added margin for space between task bars */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjusted background color and opacity */
+  border-radius: 8px; /* Added border radius */
+}
+.task-bar.active {
+  background-color: rgba(204, 204, 204, 0.8); /* Adjusted background color and opacity */
+}
+
+.task-bar.completed-task {
+padding-left: 100px;
+}
+.task-list {
+  list-style: none;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added drop shadow */
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+  /* Add the following styles to move completed tasks to the bottom */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.task-list li.completed:hover {
+  opacity: 1;
+}
